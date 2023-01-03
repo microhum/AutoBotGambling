@@ -1,11 +1,13 @@
 # AutoBotGambing,Working For UnbelievaBoat
 To use.
 
-1.Install Requirements.txt 
+- Install packgage in Requirements.txt 
 Change your directory to AutoBotGambling folder
 
   pip install Requirements.txt
   
-2.Change your cooldowns
+- Change your cooldowns and configs(You want to run it True or False)
 
-I modified thsi macro instead ,cause I'm lazy zZzzZZZZZ
+- Run mainfile.py (Default waiting is 5 seconds before the schedule start)
+
+-- I modified thsi macro instead ,cause I'm lazy zZzzZZZZZ
