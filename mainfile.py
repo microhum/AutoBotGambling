@@ -11,59 +11,25 @@ pmtypes = ["f", "r", "i", "c", "k"]
 
 
 def type_send(msg):
+    print("sent",msg)
     keyboard.type(str(msg))
     time.sleep(2)
     keyboard.press(Key.enter)
 
-def print_buyj(scheduler):
-    type_send("pls buy j")
-    scheduler.run_after(print_buyj, cd.buy_cooldown)
+def print_work(scheduler):
+    type_send(";work")
+    scheduler.run_after(print_work, cd.work_cooldown)
 
-def print_j(scheduler):
-    type_send("pls use j")
-    time.sleep(random.randint(cd.plsusej_cooldown, cd.plsusej_cooldown+5))
-    type_send(config.send_id)
-    time.sleep(random.randint(cd.sendtoid_cooldown,cd.sendtoid_cooldown+ 5))
-    type_send("1")
-    time.sleep(random.randint(cd.sendjAnswer_cooldown, cd.sendjAnswer_cooldown+5))
-    scheduler.run_after(print_j, cd.use_cooldown)
+def print_slut(scheduler):
+    type_send(";slut")
+    scheduler.run_after(print_slut, cd.slut_cooldown)
 
-def print_beg(scheduler):
-    type_send("pls beg")
-    scheduler.run_after(print_beg, cd.beg_cooldown)
-
-def print_hunt(scheduler):
-    type_send("pls hunt")
-    scheduler.run_after(print_hunt, cd.hunt_cooldown)
-
-def print_fish(scheduler):
-    type_send("pls fish")
-    scheduler.run_after(print_fish, cd.fish_cooldown)
-
-def print_pm(scheduler):
-    type_send("pls pm")
-    time.sleep(random.randint(cd.pmAnswer_cooldown, cd.pmAnswer_cooldown+5))
-    type_send(random.choice(pmtypes))
-    scheduler.run_after(print_pm, cd.pm_cooldown)
-
-def print_bet(scheduler):
-    msg= "pls bet " + str(config.bet_amount)
-    type_send(msg)
-    scheduler.run_after(print_bet, cd.bet_cooldown)
-
-def print_slots(scheduler):
-    msg= "pls slots " + str(config.slots_amount)
-    type_send(msg)
-    scheduler.run_after(print_slots, cd.slots_cooldown)
-
-def print_hl(scheduler):
-    type_send("pls hl")
-    time.sleep(random.randint(cd.hlAnswer_cooldown, cd.hlAnswer_cooldown+5))
-    type_send(config.hl_answer)
-    scheduler.run_after(print_hl, cd.hl_cooldown)
+def print_crime(scheduler):
+    type_send(";crime")
+    scheduler.run_after(print_crime, cd.crime_cooldown)
 
 def print_dep(scheduler):
-    type_send("pls dep all")
+    type_send(";dep all")
     scheduler.run_after(print_dep, cd.dep_cooldown)
 
 class Scheduler:
@@ -87,27 +53,16 @@ class Scheduler:
                 if start_after < time.time():
                     self.ready.append(task)
                     del self.waiting[i]
-
+print("Preparing run")
 s = Scheduler()
 time.sleep(5) #activate your window where you need to type within 5 sec
-if config.beg:
-    s.run_soon(print_beg)
-if config.pink:
-    s.run_soon(print_j)
-if config.buyj:
-    s.run_soon(print_buyj)
-if config.hunt:
-    s.run_soon(print_hunt)
-if config.fish:
-    s.run_soon(print_fish)
-if config.pm:
-    s.run_soon(print_pm)
-if config.bet:
-    s.run_soon(print_bet)
-if config.slots:
-    s.run_soon(print_slots)
-if config.hl:
-    s.run_soon(print_hl)
+print("Start")
+if config.work:
+    s.run_soon(print_work)
+if config.slut:
+    s.run_soon(print_slut)
+if config.crime:
+    s.run_soon(print_crime)
 if config.dep:
     s.run_soon(print_dep)
 s.run_until_complete()
