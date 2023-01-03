@@ -3,9 +3,7 @@ To use.
 
 - Install packgage in Requirements.txt 
 Change your directory to AutoBotGambling folder
-
-           pip install Requirements.txt
-  
+    pip install Requirements.txt
 - Change your cooldowns and configs(You want to run it True or False)
 
 - Run mainfile.py (Default waiting is 5 seconds before the schedule start)
