@@ -8,4 +8,4 @@ Change your directory to AutoBotGambling folder
   
 2.Change your cooldowns
 
-This macro is modified cause i'm lazy zZzzZZZZZ
+I modified thsi macro instead ,cause I'm lazy zZzzZZZZZ
