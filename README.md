@@ -6,7 +6,7 @@ Change your directory to AutoBotGambling folder
 
         pip install Requirements.txt
 
-- Change your cooldowns and configs(You want to run it True or False)
+- Change your cooldowns and configs(You want to run it ON or OFF)
 
 - Run mainfile.py (Default waiting is 5 seconds before the schedule start)
 
